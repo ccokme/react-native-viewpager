@@ -269,7 +269,7 @@ var ViewPager = React.createClass({
         pagesNum++;
         hasLeft = true;
       } else if (this.state.currentPage == 0 && this.props.isLoop) {
-        bodyComponents.push(this._getPage(pageIDs.length - 1, true));
+        bodyComponents.push(this._getPage(pageIDs.length - 1, false));
         pagesNum++;
         hasLeft = true;
       }
@@ -283,7 +283,7 @@ var ViewPager = React.createClass({
         bodyComponents.push(this._getPage(this.state.currentPage + 1));
         pagesNum++;
       } else if (this.state.currentPage == pageIDs.length - 1 && this.props.isLoop) {
-        bodyComponents.push(this._getPage(0, true));
+        bodyComponents.push(this._getPage(0, false));
         pagesNum++;
       }
     }
